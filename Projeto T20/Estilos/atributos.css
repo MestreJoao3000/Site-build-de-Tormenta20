@@ -1,0 +1,122 @@
+/*------------------------------Atributos------------------------------*/
+
+.atrF {
+    position: absolute;
+    width: 4.8%;
+    height: 37%;
+    text-align: center;
+    font-size: 200%;
+}
+
+.atrF::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+#atrFfor {
+    left: 0%;
+}
+
+#atrFdes {
+    left: 6%;
+}
+
+#atrFcon {
+    left: 12%;
+}
+
+#atrFint {
+    left: 18%;
+}
+
+#atrFsab {
+    left: 24%;
+}
+
+#atrFcar {
+    left: 30%;
+}
+
+
+
+.atrD {
+    position: absolute;
+    width: 3%;
+    height: 10%;
+    top: 97%;
+    text-align: center;
+    border-radius: 60%;
+    border: solid;
+    border-color: rgb(53, 51, 51);
+    ;
+}
+
+.atrD::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+#atrDfor {
+    left: 0.9%;
+}
+
+#atrDdes {
+    left: 6.9%;
+}
+
+#atrDcon {
+    left: 12.9%;
+}
+
+#atrDint {
+    left: 18.9%;
+}
+
+#atrDsab {
+    left: 24.9%;
+}
+
+#atrDcar {
+    left: 30.9%;
+}
+
+
+
+.atrN {
+    position: absolute;
+}
+
+#atrNfor {
+    left: 1.9%;
+}
+
+#atrNdes {
+    left: 7.9%;
+}
+
+#atrNcon {
+    left: 13.9%;
+}
+
+#atrNint {
+    left: 20.1%;
+}
+
+#atrNsab {
+    left: 25.9%;
+}
+
+#atrNcar {
+    left: 31.9%;
+}
+
+/*------------------------------Péricias------------------------------*/
+
+.perLitem{
+    border: 2px solid red;
+    color: red;
+    border-radius: 12px;
+    margin: 1.5%;
+    height: 20px;
+    text-align:center;
+}

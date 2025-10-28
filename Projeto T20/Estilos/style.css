@@ -1,0 +1,12 @@
+form{
+    position: relative;
+}
+
+li{
+    list-style-type: none;
+}
+
+ul{
+    position: relative;
+    width: 20%;
+}
