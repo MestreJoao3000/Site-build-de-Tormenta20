@@ -1,0 +1,105 @@
+/*------------------------------Atributos------------------------------*/
+
+.atrF {
+    position: absolute;
+    width: 7%;
+    height: 37%;
+    text-align: center;
+    font-size: 200%;
+}
+
+.atrF::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+#atrFfor {
+    left: 3%;
+}
+
+#atrFdes {
+    left: 12%;
+}
+
+#atrFcon {
+    left: 21%;
+}
+
+#atrFint {
+    left: 30%;
+}
+
+#atrFsab {
+    left: 39%;
+}
+
+#atrFcar {
+    left: 48%;
+}
+
+
+
+.atrN {
+    position: absolute;
+}
+
+#atrNfor {
+    left: 5.5%;
+}
+
+#atrNdes {
+    left: 14.5%;
+}
+
+#atrNcon {
+    left: 23%;
+}
+
+#atrNint {
+    left: 32.7%;
+}
+
+#atrNsab {
+    left: 41.3%;
+}
+
+#atrNcar {
+    left: 50.3%;
+}
+
+.atrBbutton {
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+}
+
+#atrBfor {
+    bottom: 1.9rem;
+}
+
+#atrBdes {
+    bottom: 1.9rem;
+    left: 6%;
+}
+
+#atrBcon {
+    bottom: 1.9rem;
+    left: 12%;
+}
+
+#atrBint {
+    bottom: 1.9rem;
+    left: 18%;
+}
+
+#atrBsab {
+    bottom: 1.9rem;
+    left: 24%;
+}
+
+#atrBcar {
+    bottom: 1.9rem;
+    left: 30%;
+}
+
+/*------------------------------Péricias------------------------------*/

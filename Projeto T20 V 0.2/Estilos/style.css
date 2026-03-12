@@ -1,0 +1,35 @@
+form{
+    position: relative;
+}
+
+li{
+    list-style-type: none;
+}
+
+ul{
+    position: relative;
+    width: 20%;
+}
+
+#cont1{
+    position: absolute;
+    /*border: solid 1px black;*/
+    height: 100%;
+    width: 100%;
+}
+
+#contb{
+    position: absolute;
+    border: solid 1px blue;
+    height: 17%;
+    width: 37%;
+    left: 29%;
+    padding: 0.5%;
+}
+
+#contp{
+    position: absolute;
+    border: solid 1px red;
+    padding: 0.5%;
+    right: 1%;
+}

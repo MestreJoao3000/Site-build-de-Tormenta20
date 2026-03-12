@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Tormenta 20 Builder</title>
+    <link rel="stylesheet" href="/Estilos/style.css">
+    <link rel="stylesheet" href="/Estilos/atributos.css">
+    <link rel="stylesheet" href="/Estilos/pericias.css">
+</head>
+
+<body>
+    <div id="cont1">
+        <div id="contb">
+            <form>
+                <label for="nome">Nome</label>
+                <input type="text" required>
+                <label form="raca">Raça:</label>
+                <select name="raca" id="raca" onchange="atrFraca()" required>
+                    <option value="" selected disabled></option>
+                    <option value="anao">Anão</option>
+                    <option value="dahllan">Dahllan</option>
+                    <option value="elfo">Elfo</option>
+                    <option value="goblin">Goblin</option>
+                    <option value="golem">Golem</option>
+                    <option value="humano">Humano</option>
+                    <option value="hynne">Hynne</option>
+                    <option value="klyren">Klyren</option>
+                    <option value="lefou">Lefou</option>
+                    <option value="minotauro">Minotauro</option>
+                    <option value="osteon">Osteon</option>
+                    <option value="quareen">Quareen</option>
+                    <option value="sereia">Sereia/Tritão</option>
+                    <option value="silfide">Sílfide</option>
+                    <option value="suraggel(a)">Suraggel(Aggelus)</option>
+                    <option value="suraggel(s)">Suraggel(Sulfure)</option>
+                    <option value="trog">Trog</option>
+                </select>
+                <label for="classe">Classe:</label>
+                <select name="classe" id="classe" onchange="perLadd()" required>
+                    <option value="" selected disabled></option>
+                    <option value="arcanista">Arcanista</option>
+                    <option value="barbaro">Bárbaro</option>
+                    <option value="bardo">Bardo</option>
+                    <option value="bucaneiro">Bucaneiro</option>
+                    <option value="cacador">Caçador</option>
+                    <option value="cavaleiro">Cavaleiro</option>
+                    <option value="clerigo">Clérigo</option>
+                    <option value="druida">Druida</option>
+                    <option value="guerreiro">Guerreiro</option>
+                    <option value="inventor">Inventor</option>
+                    <option value="ladino">Ladino</option>
+                    <option value="lutador">Lutador</option>
+                    <option value="nobre">Nobre</option>
+                    <option value="paladino">Paladino</option>
+                </select><br><br>
+                <label for="origens">Origens:</label>
+                <select name="origens" id="origens" required>
+                    <option value="" selected disabled></option>
+                    <option value="acolito">Acólito</option>
+                    <option value="amigo">Amigo dos animais</option>
+                    <option value="amnesico">Amnésico</option>
+                    <option value="aristocrata">Aristocrata</option>
+                    <option value="artesao">Artesão</option>
+                    <option value="artista">Artista</option>
+                    <option value="assistente">Assistente de laboratório</option>
+                    <option value="batedor">Batedor</option>
+                    <option value="capanga">Capanga</option>
+                    <option value="charlatao">Charlatão</option>
+                    <option value="circense">Cirsence</option>
+                    <option value="criminoso">Criminoso</option>
+                    <option value="curandeiro">Curandeiro</option>
+                    <option value="eremita">Eremita</option>
+                    <option value="escravo">Escravo</option>
+                    <option value="estudioso">Estudioso</option>
+                    <option value="fazendeiro">Fazendeiro</option>
+                    <option value="forasteiro">Forasteiro</option>
+                    <option value="gladiador">Gladiador</option>
+                    <option value="guarda">Guarda</option>
+                    <option value="herdeiro">Herdeiro</option>
+                    <option value="heroi">Herói camponês</option>
+                    <option value="marujo">Marujo</option>
+                    <option value="mateiro">Mateiro</option>
+                    <option value="membro">Membro da guilda</option>
+                    <option value="mercador">Mercador</option>
+                    <option value="minerador">Minerador</option>
+                    <option value="nomade">Nômade</option>
+                    <option value="pivete">Pivete</option>
+                    <option value="refugiado">Refugiado</option>
+                    <option value="seguidor">Seguidor</option>
+                    <option value="selvagem">Selvagem</option>
+                    <option value="soldado">Soldado</option>
+                    <option value="taverneiro">Taverneiro</option>
+                    <option value="trabalhador">Trabalhador</option>
+                </select>
+                <label for="deus">Devoção</label>
+                <select name="deuses" id="deuses" required>
+                    <option value="" selected disabled></option>
+                    <option value="nenhum">Nenhum</option>
+                    <option value="arahadak">Arahadak</option>
+                    <option value="allihanna">Allihanna</option>
+                    <option value="arsenal">Arsenal</option>
+                    <option value="azgher">Azgher</option>
+                    <option value="hyninn">Hyninn</option>
+                    <option value="kallyadranoch">Kallyadranoch</option>
+                    <option value="khalmyr">Khalmyr</option>
+                    <option value="lena">Lena</option>
+                    <option value="linwu">Lin-Wu</option>
+                    <option value="marah">Marah</option>
+                    <option value="megalokk">Megalokk</option>
+                    <option value="nimb">Nimb</option>
+                    <option value="oceano">Oceano</option>
+                    <option value="sszzaas">Sszzaas</option>
+                    <option value="tannatoh">Tanna-Toh</option>
+                    <option value="tenebra">Tenebra</option>
+                    <option value="thwor">Thwor</option>
+                    <option value="thyatis">Thyatis</option>
+                    <option value="valkaria">Valkaria</option>
+                    <option value="wynna">Wynna</option>
+                </select>
+                <label for="jogador">Nome do jogador</label>
+                <input type="text" required><br><br>
+
+                <!--------------------- Atributos ---------------------->
+
+                <label for="forca" class="atrN" id="atrNfor">For</label>
+                <label for="destreza" class="atrN" id="atrNdes">Des</label>
+                <label for="constituicao" class="atrN" id="atrNcon"> Con</label>
+                <label for="inteligencia" class="atrN" id="atrNint">Int</label>
+                <label for="sabedoria" class="atrN" id="atrNsab">Sab</label>
+                <label for="carisma" class="atrN" id="atrNcar">Car</label>
+                <br>
+                <input type="number" class="atrF" id="atrFfor" required>
+                <input type="number" class="atrF" id="atrFdes" required>
+                <input type="number" class="atrF" id="atrFcon" required>
+                <input type="number" class="atrF" id="atrFint" required>
+                <input type="number" class="atrF" id="atrFsab" required>
+                <input type="number" class="atrF" id="atrFcar" required>
+                <br>
+            </form>
+        </div>
+
+        <!--------------------- Perícias ---------------------->
+
+        <div id="contp">
+            <table>
+                <tr>
+                    <th>Perícias</th>
+                    <th>Total</th>
+                    <th>1/2 do <br> nível</th>
+                    <th>Mod. de <br> atributo</th>
+                    <th>Treino</th>
+                    <th id="tho">Outros</th>
+                </tr>
+                <tr>
+                    <td>Atletismo</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="atletismo">
+                            <option value="for" selected>For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Luta</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="luta">
+                            <option value="for" selected>For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Acrobacia+</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="acrobacia">
+                            <option value="for">For</option>
+                            <option value="des" selected>Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Cavalgar</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="cavalgar">
+                            <option value="for">For</option>
+                            <option value="des" selected>Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Furtividade+</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="furtividade">
+                            <option value="for">For</option>
+                            <option value="des" selected>Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Iniciativa</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="iniciativa">
+                            <option value="for">For</option>
+                            <option value="des" selected>Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Ladinagem*+</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="ladinagem">
+                            <option value="for">For</option>
+                            <option value="des" selected>Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Pilotagem</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="pilotagem">
+                            <option value="for">For</option>
+                            <option value="des" selected>Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Pontaria</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="pontaria">
+                            <option value="for">For</option>
+                            <option value="des" selected>Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Reflexos</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="reflexos">
+                            <option value="for">For</option>
+                            <option value="des" selected>Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Fortitude</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="fortitude">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con" selected>Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Conhecimento*</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="conhecimento">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int" selected>Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Guerra*</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="guerra">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int" selected>Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Investigação</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="investigação">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int" selected>Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Misticismo*</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="misticismo">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int" selected>Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Nobreza*</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="nobreza">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int" selected>Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Ofício</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="ofício">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int" selected>Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Ofício</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="ofício">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int" selected>Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Cura</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="cura">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab" selected>Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Intuição</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="intuição">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab" selected>Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Percepção</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="percepção">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab" selected>Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Religião*</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="religião">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab" selected>Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Sobrevivência</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="sobrevivência">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab" selected>Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Vontade</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="vontade">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab" selected>Sab</option>
+                            <option value="car">Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Adestramento*</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="adestramento">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car" selected>Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                <tr>
+                    <td>Atuação*</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="atuação">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car" selected>Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Diplomacia</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="diplomacia">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car" selected>Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Enganação</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="enganação">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car" selected>Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Intimidação</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="intimidação">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car" selected>Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Jogatina*</td>
+                    <td>24</td>
+                    <td>10</td>
+                    <td>
+                        <select id="jogatina">
+                            <option value="for">For</option>
+                            <option value="des">Des</option>
+                            <option value="con">Con</option>
+                            <option value="int">Int</option>
+                            <option value="sab">Sab</option>
+                            <option value="car" selected>Car</option>
+                        </select>
+                    </td>
+                    <td>6</td>
+                    <td>0</td>
+                </tr>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
